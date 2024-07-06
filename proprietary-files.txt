@@ -603,11 +603,6 @@ vendor/lib64/libQnnHtpV69Stub.so
 vendor/bin/motobox;SYMLINK=vendor/bin/expat
 vendor/etc/vhw.xml
 
-# OMX
-vendor/lib64/libAlacSwDec.so
-vendor/lib64/libApeSwDec.so
-vendor/lib64/libFlacSwDec.so
-
 # Perf
 vendor/bin/hw/vendor.qti.hardware.perf-hal-service
 vendor/bin/poweropt-service
