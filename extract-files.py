@@ -95,6 +95,8 @@ blob_fixups: blob_fixups_user_type = {
     ),
     'vendor/etc/seccomp_policy/atfwd@2.0.policy': blob_fixup()
         .add_line_if_missing('gettid: 1'),
+    'vendor/etc/seccomp_policy/wfdhdcphalservice.policy': blob_fixup()
+        .add_line_if_missing('gettid: 1'),
 }
 
 module = ExtractUtilsModule(
