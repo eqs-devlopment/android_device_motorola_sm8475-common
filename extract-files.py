@@ -99,6 +99,10 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/etc/seccomp_policy/modemManager.policy',
         'vendor/etc/seccomp_policy/wfdhdcphalservice.policy',
     ): blob_fixup().add_line_if_missing('gettid: 1'),
+    'system_ext/lib64/libwfdmmsrc_system.so': blob_fixup()
+        .add_needed('libgui_shim.so'),
+    'system_ext/lib64/libwfdnative.so': blob_fixup()
+        .add_needed('libinput_shim.so'),
 }
 
 module = ExtractUtilsModule(
