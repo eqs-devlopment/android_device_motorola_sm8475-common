@@ -21,6 +21,7 @@ namespace_imports = [
     'hardware/qcom-caf/sm8450',
     'hardware/qcom-caf/wlan',
     'vendor/qcom/opensource/commonsys/display',
+    'vendor/qcom/opensource/commonsys-intf/display',
     'vendor/qcom/opensource/dataservices',
 ]
 
@@ -28,6 +29,7 @@ namespace_imports = [
 libs_add_vendor_suffix = (
     'vendor.qti.hardware.qccsyshal@1.0',
     'vendor.qti.hardware.qccsyshal@1.1',
+    'vendor.qti.hardware.wifidisplaysession@1.0',
     'vendor.qti.qspmhal@1.0',
     'vendor.qti.imsrtpservice@3.0',
     'vendor.qti.diaghal@1.0',
