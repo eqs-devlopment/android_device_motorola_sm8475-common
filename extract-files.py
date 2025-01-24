@@ -35,8 +35,11 @@ libs_add_vendor_suffix = (
 )
 
 libs_remove = (
-    'vendor.qti.hardware.pal@1.0-impl',
-    'libagmclient',
+    'libar-pal',
+    'libar-acdb',
+    'liblx-osal',
+    'libats',
+    'libagm',
     'libpalclient',
     'libwpa_client',
     'libqsap_sdk',

@@ -88,29 +88,17 @@ vendor/lib/rfsa/adsp/libvpp_vqa_networks.so
 vendor/lib/rfsa/adsp/libvpt_action_recognition.so
 vendor/lib/rfsa/adsp/libworker_pool.so
 
-# Audio AGM
-vendor/lib64/libagm.so
-vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
-
 # Audio libraries
-# audio.primary.taro.so depends on vendor.qti.hardware.pal@1.0-impl, which is a gnu makefile target
-vendor/lib64/hw/audio.primary.taro.so:vendor/lib64/hw/audio.primary.taro-moto.so;DISABLE_CHECKELF;FIX_SONAME
 vendor/lib64/libadm.so
 vendor/lib64/libadsprpc.so
-vendor/lib64/libar-acdb.so
-vendor/lib64/libar-gpr.so
-vendor/lib64/libar-gsl.so
-# libar-pal depends on libagmclient, which is a gnu makefile target
-vendor/lib64/libar-pal.so;DISABLE_CHECKELF
-vendor/lib64/libats.so
 vendor/lib64/libaualgo_foundation.so
 vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libdapparamstorage.so
-vendor/lib64/liblx-ar_util.so
-vendor/lib64/liblx-osal.so
-vendor/lib64/libmcs.so
+# libmcs depends on libagm, which is a gnu makefile target
+vendor/lib64/libmcs.so;DISABLE_CHECKELF
 vendor/lib64/libpal_net_if.so
-vendor/lib64/libqtigefar.so
+# libqtigefar depends on libar-pal, which is a gnu makefile target
+vendor/lib64/libqtigefar.so;DISABLE_CHECKELF
 
 # Audio misc
 vendor/etc/ap_gain.bin
@@ -129,9 +117,6 @@ vendor/lib64/soundfx/libspeakerbundle.so
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib64/lib_bt_aptx.so
-vendor/lib64/lib_bt_ble.so
-vendor/lib64/lib_bt_bundle.so
 vendor/lib64/libbtnv.so
 vendor/lib64/libsoc_helper.so
 
@@ -531,7 +516,8 @@ vendor/etc/vintf/manifest/android.hardware.security.keymint-service-qti.xml
 vendor/lib64/libqtikeymint.so
 
 # Listen
-vendor/lib64/hw/sound_trigger.primary.taro.so
+# sound_trigger.primary.taro depends on libar-pal, which is a gnu makefile target
+vendor/lib64/hw/sound_trigger.primary.taro.so;DISABLE_CHECKELF
 vendor/lib64/libcapiv2svacnnvendor.so
 vendor/lib64/libcapiv2svarnnvendor.so
 vendor/lib64/libcapiv2uvvendor.so
